@@ -7,7 +7,8 @@ using namespace std;
 #define push_back pb;
 //eu sou fraco
 
-const int N = 1e5+5, MOD = 1e9+7;
+const int N = 1e5+5;
+const int MOD = 1e9+7;
 
 
 

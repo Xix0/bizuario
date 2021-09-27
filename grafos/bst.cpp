@@ -1,5 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+const int N = 1e5+5;
+
 vector<int> v;
-long long table[maxn][30];
+long long table[N][30], arr[N];
 
 void bst(int n) {
     for(int i = 0; i < n; i++) {

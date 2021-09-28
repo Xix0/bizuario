@@ -35,18 +35,15 @@ void dijkstra (int s) {
     dist[s] = 0;
     pq.push({0, s});
 
-    while (!pq.empty()) {
-        int ud = -pq.top().first;
-        int u = pq.top().second; pq.pop();
-        if (dist[u] < ud) continue;
-        for (auto x : adj[u]) {
-            int v = x.first;
-            int w = x.second;
-            if (dist[v] > dist[u] + w) {
-                //par[v] = u; //pra recuperar caminho
-                dist[v] = dist[u] + w;
-                pq.push({-dist[v], v});
-            }
-        }
-    }
+    while(not pq.empty()){
+		pair<int, int> u = pq.top();
+		pq.pop();
+		if(dist[u.second]<-u.first) continue;
+		for(pair<int, int> i: adj[u.second]){
+			if(dist[u.second] + i.second < dist[i.first]){
+				pq.push({-(dist[u.second] + i.second), i.first});
+				dist[i.first] = dist[u.second] + i.second;
+			}
+		}
+	}
 }

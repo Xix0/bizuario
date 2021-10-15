@@ -9,7 +9,6 @@ using namespace std;
 #define nd second
 //define push_back eh coisa de fraco
 #define pb push_back
-//eu sou fraco
 #define cl(x, v) memset((x), (v), sizeof(x))
 #define gcd(x,y) __gcd((x),(y))
 

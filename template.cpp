@@ -22,7 +22,7 @@ const int INF = 0x3f3f3f3f;
 int main(){
 	//freopen("in", "r", stdin);
 	//freopen("out", "w", stdout);
-	//ios_base::sync_with_stdio(false);
-	//cin.tie(0);
+	ios_base::sync_with_stdio(false);
+	cin.tie(0);
 	return 0;
 }

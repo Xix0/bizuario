@@ -1,3 +1,4 @@
+//ocoreencias de um padrão
 vi rabin_karp(string s, string t){
     const int p = 31;
     const int m = 1e9 + 9;
@@ -13,7 +14,6 @@ vi rabin_karp(string s, string t){
     for(int i = 0; i < T; i++) h[i+1] = (h[i] + (t[i] - 'a' + 1)*p_pot[i]) % m;
 
     //calcular o hash para o padrão s que desejo procurar
-
     for(int i = 0; i < S; i++) h_s = (h_s + (s[i] - 'a' + 1) * p_pot[i]) % m;
 
     //vetor que guarda as posicoes das ocorrencias

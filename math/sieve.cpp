@@ -9,7 +9,7 @@ void sieve(){
 	for(int i = 2; i<N; i++){
 		if(pr[i]) continue;
 		primes.push_back(i);
-		for(int j = i*i; j<N; j++) pr[j] = true;
+		for(int j = i*i; j<N; j+=i) pr[j] = true;
 	}
 }
 
